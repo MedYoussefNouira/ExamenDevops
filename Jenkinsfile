@@ -18,9 +18,9 @@ pipeline {
         stage('Build') {
             steps {
 				sh'pwd'
-				sh'export M2_HOME=/usr/share/maven'
-				sh'export PATH=$PATH:$M2_HOME/bin'
-				sh'mvn --version'
+				sh'export M2_HOME=/usr/share/maven
+				export PATH=$PATH:$M2_HOME/bin'
+				mvn --version'
                 sh 'mvn clean install'
             }
         }
