@@ -5,6 +5,7 @@ pipeline {
         stage('Clone') {
             steps {
                 // Cloning the repository
+				sh 'pwd'
                 git 'https://github.com/MedYoussefNouira/ExamenDevops.git'
             }
         }
