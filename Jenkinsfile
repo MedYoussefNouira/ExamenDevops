@@ -18,7 +18,10 @@ pipeline {
         stage('Build') {
             steps {
 				sh'pwd'
-                sh 'mvn -f ExamenDevops/pom.xml clean install'
+				sh'export M2_HOME=/usr/share/maven'
+				sh'export PATH=$PATH:$M2_HOME/bin'
+				sh'mvn --version'
+                sh 'mvn clean install'
             }
         }
 
