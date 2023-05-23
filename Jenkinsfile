@@ -9,6 +9,7 @@ pipeline {
         stage('Clone') {
             steps {
                 // Cloning the repository
+				echo 'cloning into'
 				sh 'pwd'
 				sh 'rm -rf /var/jenkins_home/workspace/azzz/*'
 				sh "git clone 'https://MedYoussefNouira:Alternance1997@github.com/MedYoussefNouira/ExamenDevops.git'"
