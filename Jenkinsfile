@@ -2,7 +2,8 @@ pipeline {
     agent any
 	
 	environment {
-        PATH = "/usr/share/maven/bin:$PATH"
+        		export M2_HOME=/usr/share/maven
+				export PATH=$PATH:$M2_HOME/bin		
     }
 
     stages {
@@ -17,9 +18,6 @@ pipeline {
 
         stage('Build') {
             steps {
-				export M2_HOME=/usr/share/maven
-				export PATH=$PATH:$M2_HOME/bin
-				mvn --version
                 sh 'mvn clean install'
             }
         }
