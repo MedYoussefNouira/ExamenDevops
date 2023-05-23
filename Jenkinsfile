@@ -18,7 +18,7 @@ pipeline {
         stage('Build') {
             steps {
 				sh'pwd'
-                sh 'mvn clean install'
+                sh 'mvn -f ExamenDevops/pom.xml clean install'
             }
         }
 
