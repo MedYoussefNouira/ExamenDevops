@@ -6,7 +6,7 @@ pipeline {
             steps {
                 // Cloning the repository
 				sh 'pwd'
-                git 'https://github.com/MedYoussefNouira/ExamenDevops.git'
+				sh "git 'https://MedYoussefNouira:Alternance1997@github.com/MedYoussefNouira/ExamenDevops.git'"
             }
         }
 
