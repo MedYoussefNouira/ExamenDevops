@@ -6,6 +6,7 @@ pipeline {
             steps {
                 // Cloning the repository
 				sh 'pwd'
+				sh 'cd /opt/JenkinsPipeline/'
 				sh "git clone 'https://MedYoussefNouira:Alternance1997@github.com/MedYoussefNouira/ExamenDevops.git'"
             }
         }
