@@ -21,6 +21,12 @@ pipeline {
 				sh 'mvn -f ExamenDevops/pom.xml clean install'
             }
         }
+			
+			 stage('Test') {
+            steps {
+                sh 'mvn f ExamenDevops/pom.xml test'
+            }
+			}
 
         stage('Sonar Analysis') {
             steps {
