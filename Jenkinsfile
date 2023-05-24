@@ -22,11 +22,13 @@ pipeline {
             }
         }
 
-				stage('Sonar') {
-			steps {
-			sh 'mvn -f ExamenDevops/pom.xml sonar:sonar  -Dsonar.login=squ_2adf672f4800ed632c244ce110d7eb52b5b72e29'
-			}
-		}
+        stage('Sonar Analysis') {
+            steps {
+                // Running Sonar analysis
+                withSonarQubeEnv('sonar') {
+                    sh 'mvn sonar:sonar'
+                }
+            }
 	
 
         stage('Deploy to Nexus') {
