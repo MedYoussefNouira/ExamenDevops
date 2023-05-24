@@ -29,6 +29,7 @@ pipeline {
                     sh 'mvn sonar:sonar'
                 }
             }
+			}
 	
 
         stage('Deploy to Nexus') {
@@ -40,5 +41,4 @@ pipeline {
             }
         }
     }
-}
 }
