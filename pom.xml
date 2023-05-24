@@ -88,5 +88,5 @@
 </build>
 
 	</build>
-		<sonar.host.url>http://localhost:9000</sonar.host.url>
+
 </project>

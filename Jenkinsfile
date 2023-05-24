@@ -32,7 +32,7 @@ pipeline {
             steps {
                 // Running Sonar analysis
                 withSonarQubeEnv('sonar') {
-                    sh 'mvn -f ExamenDevops/pom.xml sonar:sonar -Dsonar.projectKey=Jenkins'
+                    sh 'mvn -f ExamenDevops/pom.xml sonar:sonar -Dsonar.login=sqa_8fed2ba5389df35435b294b743b28f852b7f9b7c'
                 }
             }
 			}
