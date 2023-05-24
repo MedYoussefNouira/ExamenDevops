@@ -61,8 +61,11 @@ public class TrainServiceImpl implements ITrainService {
 
             }
         }
-        return cpt / occ;
-    }
+        if (occ != 0) {
+            return cpt / occ;
+        }
+
+
 
 
     public List<Train> ListerTrainsIndirects(Ville nomGareDepart, Ville nomGareArrivee) {
