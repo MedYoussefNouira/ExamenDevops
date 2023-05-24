@@ -26,7 +26,7 @@ pipeline {
             steps {
                 // Running Sonar analysis
                 withSonarQubeEnv('sonar') {
-                    sh 'mvn sonar:sonar'
+                    sh 'mvn -f ExamenDevops/pom.xml sonar:sonar'
                 }
             }
 			}
