@@ -24,7 +24,7 @@ pipeline {
 
 				stage('Sonar') {
 			steps {
-			sh 'mvn sonar:sonar -Dsonar.projectKey=ExamenDevops -Dsonar.login=squ_2adf672f4800ed632c244ce110d7eb52b5b72e29'
+			sh 'mvn -f ExamenDevops/pom.xml sonar:sonar  -Dsonar.login=squ_2adf672f4800ed632c244ce110d7eb52b5b72e29'
 			}
 		}
 	
